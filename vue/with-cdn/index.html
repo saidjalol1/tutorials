@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Vue js</title>
+</head>
+<body id="app">
+    <div class="container">{{ text }}</div>
+</body>
+<script>
+    const vm = Vue.createApp({
+        data(){
+            return {
+                text : "Started using vue for all of my Project from today Wow!"
+            }
+        }
+    }).mount('#app')
+</script>
+<style>
+.container{
+    font-weight: 900;
+    font-size: 100px;
+}
+</style>
+</html>
