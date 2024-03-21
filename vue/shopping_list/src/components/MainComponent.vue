@@ -16,33 +16,39 @@
  </template>
  
  <script setup>
- const items = [
-     {
+import { reactive } from 'vue';
+
+ const items = reactive(
+    [
+        reactive({
          'id': 0,
          'name': 'Nmadur'
-     },
-     {
+        }),
+        reactive({
          'id': 1,
          'name': 'Nmadur 2'
-     },
-     {
+        }),
+        reactive({
          'id': 2,
          'name': 'Nmadur 3'
-     },
-     {
+        }),
+        reactive({
          'id': 3,
          'name': 'Nmadur 4'
-     },
- ]
+        })
+    ]
+ )
  let title = ''
  let id = items.length // Initialize id with the length of the items array
  
  const add = (itemName) => {
      id++; // Increment id for the next item
-     items.push({
+     items.push(
+        reactive({
          "id": id,
          "name": itemName
-     });
+     })
+     );
  }
  
  const removeItem = (index) => {
